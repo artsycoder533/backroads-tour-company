@@ -228,7 +228,63 @@ Navbar
   /* the height of the ul that holds the links, find in dev tools, set this to the exact spec so that it shows it perfectly.  It adds the height of the ul back that we hid by default so we can toggle back and forth  */
   height: 280px;
 }
-/* 280px is width of navbar according to dev tools */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 992px){
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  /* hide hamburger button */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* parent container */
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* optional */
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    height: auto;
+    display: flex;
+  }
+
+  .nav-header {
+    padding: 0 0;
+  }
+
+  .nav-link {
+    padding: 0 0;
+    margin-right: 0.7rem;
+  }
+
+  .nav-link:hover {
+    padding: 0;
+    color: var(--clr-primary-5);
+    background: transparent;
+  }
+
+  .nav-icons {
+    /* this was previously set to display: none to hide it, so changing the display type makes it visible again as well as side by side */
+    display: flex;
+  }
+
+  .nav-icon {
+    margin-right: 0.7rem;
+    color: var(--clr-primary-5);
+    font-size: 1.5rem;
+    transition: var(--transition);
+  }
+
+  .nav-icon:hover {
+    color: var(--clr-primary-8);
+  }
+}
 /*
 =============== 
 Hero
