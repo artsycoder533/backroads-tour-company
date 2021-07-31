@@ -216,6 +216,19 @@ Navbar
   /* indents the link text as you hover */
   padding-left: 2.25rem;
 }
+
+/* to hide links in mobile navbar before hamburger is pressed */
+.nav-links {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.show-links {
+  /* the height of the ul that holds the links, find in dev tools, set this to the exact spec so that it shows it perfectly.  It adds the height of the ul back that we hid by default so we can toggle back and forth  */
+  height: 280px;
+}
+/* 280px is width of navbar according to dev tools */
 /*
 =============== 
 Hero
